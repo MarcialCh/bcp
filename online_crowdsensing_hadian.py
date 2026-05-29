@@ -13,6 +13,10 @@ from online.util import summarize_intervals
 
 from score import coverage_score
 
+data_path = ''
+
+path = ''
+
 def load_poi_coordinates(csv_path):
     """
     return:
@@ -90,7 +94,7 @@ def main():
     torch.manual_seed(0)
     np.random.seed(0)
     
-    X_all = load_poi_coordinates('/data/usrs/yyr/cc/pricing/datasets/haidianF_data.csv')
+    X_all = load_poi_coordinates(data_path)
 
     # center_idx = np.random.randint(len(X_all))
     
@@ -157,7 +161,7 @@ def main():
         winner_counts, cumulative_payment, cumulative_gain = summarize_intervals(winners, payments, gains, N, m)
 
 
-        write_file = open('/data/usrs/yyr/cc/pricing/crowdsensing/online/hadian' + "/" + str(task) + "_" + str(budget), 'w')
+        write_file = open(path + "/" + str(task) + "_" + str(budget), 'w')
         write_file.write(' '.join([str(v) for v in winner_counts]) + "\n")
         write_file.write(' '.join([str(p) for p in cumulative_payment]) + "\n")
         write_file.write(' '.join([str(g) for g in cumulative_gain]) + "\n")
