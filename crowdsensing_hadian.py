@@ -10,6 +10,10 @@ from online.ms import multi_stage_mechanism
 from offline.greey import greedy_mechanism
 from score import coverage_score
 
+data_path = ''
+
+path = ''
+
 def load_poi_coordinates(csv_path):
     """
     return:
@@ -87,7 +91,7 @@ def main():
     torch.manual_seed(0)
     np.random.seed(0)
     
-    X_all = load_poi_coordinates('/data/usrs/yyr/cc/pricing/datasets/haidianF_data.csv')
+    X_all = load_poi_coordinates(data_path)
 
     # center_idx = np.random.randint(len(X_all))
     
@@ -148,7 +152,7 @@ def main():
 
         print(f"time: {running_time:.6f}s")
 
-        write_file = open('/data/usrs/yyr/cc/pricing/crowdsensing/hadian' + "/" + str(task) + "_" + str(epsilon) + "_" + str(budget), 'w')
+        write_file = open(path + "/" + str(task) + "_" + str(epsilon) + "_" + str(budget), 'w')
         write_file.write(' '.join([str(v) for v in winners]) + "\n")
         write_file.write(str(current_gain) + "\n")
         write_file.write(str(running_time) + "\n")
