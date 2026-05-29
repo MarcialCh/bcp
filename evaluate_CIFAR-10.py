@@ -18,6 +18,8 @@ from offline.lazy_threshold_bcp import th_greedy_allocation
 from online.ms import multi_stage_mechanism
 from score import coverage_score, flatten_images
 
+path = ''
+
 
 # =========================
 # training
@@ -146,7 +148,7 @@ def main():
             seed = run
             print(f"\n--- Run {run+1}/{num_runs}, seed={seed} ---")
 
-            f = open('/data/usrs/yyr/cc/pricing/image_classification/cifar10' + "/" + str(len(target_labels)) + "_" + str(task) + "_" + str(epsilon) + "_" + str(budget), 'r')
+            f = open(path + "/" + str(len(target_labels)) + "_" + str(task) + "_" + str(epsilon) + "_" + str(budget), 'r')
             lines = f.readlines()
             winners = [int(v) for v in lines[0].split()]
             trainloader, testloader = get_dataloader(trainset, testset, batch_size=128, indices = winners + list(init_indices))
