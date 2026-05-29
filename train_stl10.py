@@ -12,6 +12,8 @@ from model import ResNet56
 from online.ms import multi_stage_mechanism
 from score import coverage_score, flatten_images
 
+path = ''
+
 
 # =========================
 # training
@@ -102,7 +104,7 @@ def main():
 
         winners, payments, utility = multi_stage_mechanism(X_all, list(init_indices), budget, 0.1, 'image_classification')
 
-        write_file = open('/data/usrs/yyr/cc/pricing/image_classification/stl10'+ "/" + str(budget), 'w')
+        write_file = open(path + "/" + str(budget), 'w')
         write_file.write(' '.join([str(v) for v in winners]) + "\n")
         write_file.write(' '.join([str(p) for p in payments]) + "\n")
         write_file.write(' '.join([str(u) for u in utility]) + "\n")
@@ -123,7 +125,7 @@ def main():
             seed = run
             print(f"\n--- Run {run+1}/{num_runs}, seed={seed} ---")
 
-            f = open('/data/usrs/yyr/cc/pricing/image_classification' + "/" + str(budget), 'r')
+            f = open(path + "/" + str(budget), 'r')
             lines = f.readlines()
             winners = [int(v) for v in lines[0].split()]
             trainloader, testloader = get_dataloader(trainset, testset, batch_size=128, indices = winners + list(init_indices))
