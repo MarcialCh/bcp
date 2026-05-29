@@ -21,6 +21,8 @@ from online.post import online_post_mechanism
 from online.util import summarize_intervals
 from score import coverage_score, flatten_images
 
+path = ''
+
 
 # =========================
 # training
@@ -176,7 +178,7 @@ def main():
             winner_counts, cumulative_payment, cumulative_gain = summarize_intervals(winners, payments, gains, N, m)
 
 
-            write_file = open('/data/usrs/yyr/cc/pricing/image_classification/online/cifar10' + "/" + str(task) + "_" + str(budget), 'w')
+            write_file = open(path + "/" + str(task) + "_" + str(budget), 'w')
             write_file.write(' '.join([str(v) for v in winner_counts]) + "\n")
             write_file.write(' '.join([str(p) for p in cumulative_payment]) + "\n")
             write_file.write(' '.join([str(g) for g in cumulative_gain]) + "\n")
