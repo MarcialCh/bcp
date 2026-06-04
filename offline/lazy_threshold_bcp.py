@@ -483,7 +483,7 @@ def compute_payments(X_all, costs, W, budget, epsilon, task_type):
             # replacement bid
             # ------------------------------------------------
 
-            b_kj = (bid_j * gain_k / gain_j) 
+            b_kj = (1 - epsilon) * (bid_j * gain_k / gain_j) 
 
             # ------------------------------------------------
             # proportional-share threshold
