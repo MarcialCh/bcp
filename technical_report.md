@@ -76,9 +76,7 @@ $$
 (1-\varepsilon)
 \frac{2U(W)}
      {(1-\varepsilon)B}
-=
-\frac{2U(W)}
-     {B}.
+= \frac{2U(W)}{B}.
 $$
 
 Therefore,
