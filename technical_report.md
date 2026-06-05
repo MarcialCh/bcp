@@ -50,8 +50,7 @@ $$
 Rearranging gives
 
 $$
-\frac{U_{i_m\mid W_{m-1}}}{b_{i_m}} \ge \frac{2U(W)}{(1-\varepsilon)B}.
-\tag{1}
+\frac{U_{i_m\mid W_{m-1}}}{b_{i_m}} \ge \frac{2U(W)}{(1-\varepsilon)B}. (1)
 $$
 
 Since the allocation rule selects a $(1-\varepsilon)$-approximate
