@@ -205,7 +205,7 @@ $$
 \le
 (1-\varepsilon)
 \frac{U_{k\mid S_{r-1}}}{p_k}.
-\tag{1}
+(1)
 $$
 
 Similarly,
