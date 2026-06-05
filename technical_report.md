@@ -144,12 +144,12 @@ $$
 For every winner $k\in W$, the payment is defined as
 
 $$
-p_k =
-\max_{1 \le j \le \hat{\ell}+1}
-\min \bigl(
-b_{k(j)}^{\varepsilon},
-\rho_{k(j)}^{\varepsilon}
-\bigr).
+p_k=
+\min
+\bigl\{
+b_{k(r)}^{\varepsilon},
+\rho_{k(r)}^{\varepsilon}
+\bigr\}.
 $$
 
 where
