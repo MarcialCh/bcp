@@ -104,8 +104,7 @@ By telescoping,
 $$
 \sum_{t=1}^{m}
 U_{i_t\mid W_{t-1}}
-=
-U(W).
+= U(W).
 $$
 
 Hence,
@@ -145,9 +144,7 @@ $$
 For every winner $k\in W$, the payment is defined as
 
 $$
-p_k
-=
-\max_{1\le j\le \hat{\ell}+1}
+p_k = \max_{1\le j\le \hat{\ell}+1}
 \min
 \left\{
 b_{k(j)}^{\varepsilon},
@@ -158,8 +155,7 @@ $$
 where
 
 $$
-b_{k(j)}^{\varepsilon}
-=
+b_{k(j)}^{\varepsilon}=
 (1-\varepsilon)b_j
 \frac{U_{k\mid S_{j-1}}}
      {U_{j\mid S_{j-1}}},
@@ -168,8 +164,7 @@ $$
 and
 
 $$
-\rho_{k(j)}^{\varepsilon}
-=
+\rho_{k(j)}^{\varepsilon}=
 \frac{(1-\varepsilon)B}{2}
 \frac{U_{k\mid S_{j-1}}}
      {U(S_{j-1}\cup\{k\})}.
@@ -188,8 +183,7 @@ We first establish an upper bound on the payment of every winner.
 Consider an arbitrary winner $k\in W$. By the definition of $p_k$, there exists an index $r$ such that
 
 $$
-p_k
-=
+p_k=
 \min
 \left\{
 b_{k(r)}^{\varepsilon},
@@ -203,8 +197,7 @@ $$
 p_k
 \le
 b_{k(r)}^{\varepsilon}
-=
-(1-\varepsilon)b_r
+=(1-\varepsilon)b_r
 \frac{U_{k\mid S_{r-1}}}
      {U_{r\mid S_{r-1}}}.
 $$
@@ -225,8 +218,7 @@ $$
 p_k
 \le
 \rho_{k(r)}^{\varepsilon}
-=
-\frac{(1-\varepsilon)B}{2}
+=\frac{(1-\varepsilon)B}{2}
 \frac{U_{k\mid S_{r-1}}}
      {U(S_{r-1}\cup\{k\})}.
 $$
@@ -437,8 +429,7 @@ $$
 \sum_{k\in W} p_k
 \le
 \frac{B}{U(W)}U(W)
-=
-B.
+=B.
 $$
 
 Hence, the mechanism is budget feasible:
