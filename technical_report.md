@@ -524,11 +524,9 @@ Using $1-x\leq e^{-x}$, we obtain
 $$
 \Delta_{l+1}
 \leq
-\exp\left(
+\exp (
 -(1-\varepsilon)
-\sum_{k=1}^{l+1}\frac{b_{i_k'}}{B}
-\right)U(W^*)
-e^{-(1-\varepsilon)}U(W^*).
+\sum_{k=1}^{l+1}\frac{b_{i_k'}}{B})U(W^*)e^{-(1-\varepsilon)}U(W^*).
 $$
 
 Thus,
