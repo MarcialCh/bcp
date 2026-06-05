@@ -146,7 +146,7 @@ For every winner $k\in W$, the payment is defined as
 $$
 p_k=
 \min\{b_{k(r)}^{\varepsilon},
-\rho_{k(r)}^{\varepsilon}\}.
+\beta_{k(r)}^{\varepsilon}\}.
 $$
 
 where
@@ -161,7 +161,7 @@ $$
 and
 
 $$
-\rho_{k(j)}^{\varepsilon}=
+\beta_{k(j)}^{\varepsilon}=
 \frac{(1-\varepsilon)B}{2}
 \frac{U_{k\mid S_{j-1}}}
      {U(S_{j-1}\cup\{k\})}.
@@ -182,7 +182,7 @@ Consider an arbitrary winner $k\in W$. By the definition of $p_k$, there exists 
 $$
 p_k=
 \min\{b_{k(r)}^{\varepsilon},
-\rho_{k(r)}^{\varepsilon}\}.
+\beta_{k(r)}^{\varepsilon}\}.
 $$
 
 Therefore,
@@ -211,7 +211,7 @@ Similarly,
 $$
 p_k
 \le
-\rho_{k(r)}^{\varepsilon}
+\beta_{k(r)}^{\varepsilon}
 =\frac{(1-\varepsilon)B}{2}
 \frac{U_{k\mid S_{r-1}}}
      {U(S_{r-1}\cup\{k\})}.
