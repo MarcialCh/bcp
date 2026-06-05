@@ -419,10 +419,10 @@ $\square$
 
 ## Lemma 1.2: Approximation of Lazy Fractional Greedy without Inactive-Element Loss
 
-Ignoring the inactive-element loss, the lazy fractional greedy solution $S_{l+1}'$ satisfies
+Ignoring the inactive-element loss, the lazy fractional greedy solution $S_{l+1}$ satisfies
 
 $$
-U(W^*) \leq \frac{e}{(e-1)(1-\varepsilon)} U(S_{l+1}').
+U(W^*) \leq \frac{e}{(e-1)(1-\varepsilon)} U(S_{l+1}).
 $$
 
 ### Proof
@@ -433,53 +433,53 @@ $$
 \sum_{i\in W^*} b_i \leq B.
 $$
 
-Let $S_{k-1}'$ be the set constructed by the lazy greedy algorithm before iteration $k$, and let $i_k'$ be the seller selected in iteration $k$.
+Let $S_{k-1}$ be the set constructed by the lazy greedy algorithm before iteration $k$, and let $i_k$ be the seller selected in iteration $k$.
 
 Under lazy evaluation, the selected seller has density at least a $(1-\varepsilon)$ fraction of the maximum available density. Hence,
 
 $$
-\frac{U_{i_k'\mid S_{k-1}'}}{b_{i_k'}}
+\frac{U_{i_k\mid S_{k-1}}}{b_{i_k}}
 \geq
 (1-\varepsilon)
-\max_{j\in A\setminus S_{k-1}'}
-\frac{U_{j\mid S_{k-1}'}}{b_j}.
+\max_{j\in A\setminus S_{k-1}}
+\frac{U_{j\mid S_{k-1}}}{b_j}.
 $$
 
 
-Therefore, there exists at least one seller in $W^*\setminus S_{k-1}'$ whose density is at least the average density of the remaining optimal marginal utility, namely,
+Therefore, there exists at least one seller in $W^*\setminus S_{k-1}$ whose density is at least the average density of the remaining optimal marginal utility, namely,
 
 $$
-\max_{j\in A\setminus S_{k-1}'}
-\frac{U_{j\mid S_{k-1}'}}{b_j}
+\max_{j\in A\setminus S_{k-1}}
+\frac{U_{j\mid S_{k-1}}}{b_j}
 \geq
-\frac{U(W^*) - U(S_{k-1}')}{B}.
+\frac{U(W^*) - U(S_{k-1})}{B}.
 $$
 
 Combining the above inequalities gives
 
 $$
-\frac{U_{i_k'\mid S_{k-1}'}}{b_{i_k'}}
+\frac{U_{i_k\mid S_{k-1}}}{b_{i_k}}
 \geq
 (1-\varepsilon)
-\frac{U(W^*) - U(S_{k-1}')}{B}.
+\frac{U(W^*) - U(S_{k-1})}{B}.
 $$
 
 Equivalently,
 
 $$
-U_{i_k'\mid S_{k-1}'}
+U_{i_k\mid S_{k-1}}
 \geq
 (1-\varepsilon)
-\frac{b_{i_k'}}{B}
+\frac{b_{i_k}}{B}
 \left(
-U(W^*) - U(S_{k-1}')
+U(W^*) - U(S_{k-1})
 \right).
 $$
 
 Let
 
 $$
-\Delta_k = U(W^*) - U(S_k').
+\Delta_k = U(W^*) - U(S_k).
 $$
 
 Then
@@ -488,14 +488,14 @@ $$
 \Delta_k
 \leq
 \left(
-1 - (1-\varepsilon)\frac{b_{i_k'}}{B}
+1 - (1-\varepsilon)\frac{b_{i_k}}{B}
 \right)\Delta_{k-1}.
 $$
 
 For the fractional greedy solution, the budget is exactly filled after adding the fractional seller $i^+$. That is,
 
 $$
-\sum_{k=1}^{l+1} b_{i_k'} = B.
+\sum_{k=1}^{l+1} b_{i_k} = B.
 $$
 
 Applying the above recurrence over all fractional greedy steps yields
@@ -505,7 +505,7 @@ $$
 \leq
 \prod_{k=1}^{l+1}
 \left(
-1 - (1-\varepsilon)\frac{b_{i_k'}}{B}
+1 - (1-\varepsilon)\frac{b_{i_k}}{B}
 \right)
 U(W^*).
 $$
@@ -516,7 +516,7 @@ $e^{-(1-\varepsilon)}U(W^*)$.
 Thus,
 
 $$
-U(S_{l+1}')
+U(S_{l+1})
 \geq
 \left(1-e^{-(1-\varepsilon)}\right)U(W^*).
 $$
@@ -532,7 +532,7 @@ $$
 we further have
 
 $$
-U(S_{l+1}')
+U(S_{l+1})
 \geq
 (1-\varepsilon)\left(1-\frac{1}{e}\right)U(W^*).
 $$
@@ -542,7 +542,7 @@ Rearranging gives
 $$
 U(W^*)
 \leq
-\frac{1}{(1-\varepsilon)(1-1/e)}U(S_{l+1}').
+\frac{1}{(1-\varepsilon)(1-1/e)}U(S_{l+1}).
 $$
 
 Therefore,
@@ -550,7 +550,7 @@ Therefore,
 $$
 U(W^*)
 \leq
-\frac{e}{(e-1)(1-\varepsilon)}U(S_{l+1}').
+\frac{e}{(e-1)(1-\varepsilon)}U(S_{l+1}).
 $$
 
 This completes the proof.
