@@ -185,10 +185,10 @@ Consider an arbitrary winner $k\in W$. By the definition of $p_k$, there exists 
 $$
 p_k=
 \min
-\left\{
+\bigl{
 b_{k(r)}^{\varepsilon},
 \rho_{k(r)}^{\varepsilon}
-\right\}.
+\bigr}.
 $$
 
 Therefore,
@@ -230,7 +230,7 @@ $$
 \ge
 \frac{2U(S_{r-1}\cup\{k\})}
      {(1-\varepsilon)B}.
-\tag{2}
+(2)
 $$
 
 We now prove that
@@ -239,7 +239,7 @@ $$
 p_k
 \le
 \frac{B U_{k\mid S_{r-1}}}{U(W)}.
-\tag{3}
+(3)
 $$
 
 Assume otherwise that
@@ -248,7 +248,7 @@ $$
 p_k
 >
 \frac{B U_{k\mid S_{r-1}}}{U(W)}.
-\tag{4}
+(4)
 $$
 
 Then
@@ -257,7 +257,7 @@ $$
 \frac{U_{k\mid S_{r-1}}}{p_k}
 <
 \frac{U(W)}{B}.
-\tag{5}
+(5)
 $$
 
 Define
@@ -272,7 +272,7 @@ Since $W\subseteq S_2$, by monotonicity,
 
 $$
 U(W)\le U(S_2).
-\tag{6}
+(6)
 $$
 
 #### Case 1: $S_1=S_2$
@@ -281,7 +281,7 @@ In this case, $W\subseteq S_1$. Therefore,
 
 $$
 U(W)\le U(S_1)=U(S_{r-1}\cup\{k\}).
-\tag{7}
+(7)
 $$
 
 Combining (2) and (7), we obtain
@@ -308,7 +308,7 @@ $$
 \frac{1}{1-\varepsilon}
 \frac{U_{r\mid S_{r-1}}}
      {b_r}.
-\tag{8}
+(8)
 $$
 
 Substituting (1) into (8) yields
@@ -319,7 +319,7 @@ $$
 \le
 \frac{U_{k\mid S_{r-1}}}
      {p_k}.
-\tag{9}
+(9)
 $$
 
 Since $S_2\setminus S_1\subseteq W$, and the total bid of all winners satisfies
@@ -328,7 +328,7 @@ $$
 \sum_{i\in W} b_i
 \le
 \frac{B}{2},
-\tag{10}
+(10)
 $$
 
 we have
@@ -337,7 +337,7 @@ $$
 \sum_{i\in S_2\setminus S_1} b_i
 \le
 \frac{B}{2}.
-\tag{11}
+(11)
 $$
 
 Combining (9) and (11),
@@ -348,7 +348,7 @@ U(S_2)-U(S_1)
 \frac{B}{2}
 \frac{U_{k\mid S_{r-1}}}
      {p_k}.
-\tag{12}
+(12)
 $$
 
 Applying (5), we get
@@ -357,7 +357,7 @@ $$
 U(S_2)-U(S_1)
 <
 \frac{U(W)}{2}.
-\tag{13}
+(13)
 $$
 
 Since $U(W)\le U(S_2)$,
@@ -376,7 +376,7 @@ $$
 U(S_1)
 >
 \frac{1}{2}U(W).
-\tag{14}
+(14)
 $$
 
 Substituting (14) into (2),
@@ -401,7 +401,7 @@ $$
 p_k
 \le
 \frac{B U_{k\mid S_{r-1}}}{U(W)}.
-\tag{15}
+(15)
 $$
 
 Summing over all winners, we obtain
