@@ -148,6 +148,7 @@ p_k=
 \min\{b_{k(r)}^{\varepsilon},
 \rho_{k(r)}^{\varepsilon}\}.
 $$
+
 where
 
 $$
