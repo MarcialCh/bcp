@@ -501,8 +501,7 @@ $$
 Applying the above recurrence over all fractional greedy steps yields
 
 $$
-\Delta_{l+1}
-\leq
+\Delta_{l+1} \leq
 \prod_{k=1}^{l+1}
 \left(
 1 - (1-\varepsilon)\frac{b_{i_k}}{B}
@@ -511,9 +510,9 @@ U(W^*).
 $$
 
 Using $1-x\leq e^{-x}$, we obtain
+
 $$
-\Delta_{l+1}
-\le
+\Delta_{l+1} \le
 \exp\left(
 -(1-\varepsilon)
 \sum_{k=1}^{l+1}
