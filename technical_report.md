@@ -446,6 +446,7 @@ $$
 $$
 
 By monotonicity and submodularity of $U(\cdot)$, we have
+
 $$
 U(W^*) - U(S_{k-1}')
 \leq
