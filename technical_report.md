@@ -145,13 +145,9 @@ For every winner $k\in W$, the payment is defined as
 
 $$
 p_k=
-\min
-\bigl\{
-b_{k(r)}^{\varepsilon},
-\rho_{k(r)}^{\varepsilon}
-\bigr\}.
+\min\{\,b_{k(r)}^{\varepsilon},
+\rho_{k(r)}^{\varepsilon}\,\}.
 $$
-
 where
 
 $$
