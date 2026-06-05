@@ -1,4 +1,4 @@
-### Lemma X (Total Bid Bound under Lazy Proportional-Share Allocation)
+### Lemma 1 (Total Bid Bound under Lazy Proportional-Share Allocation)
 
 Let
 
@@ -118,7 +118,7 @@ $$
 $\square$
 
 
-### Theorem X (Budget Feasibility under Lazy Evaluation)
+### Theorem 1.1 (Budget Feasibility under Lazy Evaluation)
 
 Let $W$ be the winner set returned by the lazy-threshold proportional-share allocation rule. Suppose that each selected seller satisfies
 
@@ -239,9 +239,7 @@ $$
 Assume otherwise that
 
 $$
-p_k
->
-\frac{B U_{k\mid S_{r-1}}}{U(W)}.
+p_k > \frac{B U_{k\mid S_{r-1}}}{U(W)}.
 (4)
 $$
 
@@ -418,3 +416,160 @@ $$
 $$
 
 $\square$
+
+## Lemma 1.2: Approximation of Lazy Fractional Greedy without Inactive-Element Loss
+
+Ignoring the inactive-element loss, the lazy fractional greedy solution $S_{l+1}'$ satisfies
+
+$$
+U(W^*) \leq \frac{e}{(e-1)(1-\varepsilon)} U(S_{l+1}').
+$$
+
+### Proof
+
+Let $W^*$ denote the optimal budget-feasible solution, where
+
+$$
+\sum_{i\in W^*} b_i \leq B.
+$$
+
+Let $S_{k-1}'$ be the set constructed by the lazy greedy algorithm before iteration $k$, and let $i_k'$ be the seller selected in iteration $k$.
+
+Under lazy evaluation, the selected seller has density at least a $(1-\varepsilon)$ fraction of the maximum available density. Hence,
+
+$$
+\frac{U_{i_k'\mid S_{k-1}'}}{b_{i_k'}}
+\geq
+(1-\varepsilon)
+\max_{j\in A\setminus S_{k-1}'}
+\frac{U_{j\mid S_{k-1}'}}{b_j}.
+$$
+
+By monotonicity and submodularity of $U(\cdot)$, we have
+
+$$
+U(W^*) - U(S_{k-1}')
+\leq
+U(W^*\cup S_{k-1}') - U(S_{k-1}')
+\leq
+\sum_{j\in W^*\setminus S_{k-1}'} U_{j\mid S_{k-1}'}.
+$$
+
+Since $W^*$ is budget-feasible, $\sum_{j\in W^*} b_j \leq B$. Therefore, there exists at least one seller in $W^*\setminus S_{k-1}'$ whose density is at least the average density of the remaining optimal marginal utility, namely,
+
+$$
+\max_{j\in A\setminus S_{k-1}'}
+\frac{U_{j\mid S_{k-1}'}}{b_j}
+\geq
+\frac{U(W^*) - U(S_{k-1}')}{B}.
+$$
+
+Combining the above inequalities gives
+
+$$
+\frac{U_{i_k'\mid S_{k-1}'}}{b_{i_k'}}
+\geq
+(1-\varepsilon)
+\frac{U(W^*) - U(S_{k-1}')}{B}.
+$$
+
+Equivalently,
+
+$$
+U_{i_k'\mid S_{k-1}'}
+\geq
+(1-\varepsilon)
+\frac{b_{i_k'}}{B}
+\left(
+U(W^*) - U(S_{k-1}')
+\right).
+$$
+
+Let
+
+$$
+\Delta_k = U(W^*) - U(S_k').
+$$
+
+Then
+
+$$
+\Delta_k
+\leq
+\left(
+1 - (1-\varepsilon)\frac{b_{i_k'}}{B}
+\right)\Delta_{k-1}.
+$$
+
+For the fractional greedy solution, the budget is exactly filled after adding the fractional seller $i^+$. That is,
+
+$$
+\sum_{k=1}^{l+1} b_{i_k'} = B.
+$$
+
+Applying the above recurrence over all fractional greedy steps yields
+
+$$
+\Delta_{l+1}
+\leq
+\prod_{k=1}^{l+1}
+\left(
+1 - (1-\varepsilon)\frac{b_{i_k'}}{B}
+\right)
+U(W^*).
+$$
+
+Using $1-x\leq e^{-x}$, we obtain
+
+$$
+\Delta_{l+1}
+\leq
+\exp\left(
+-(1-\varepsilon)
+\sum_{k=1}^{l+1}\frac{b_{i_k'}}{B}
+\right)U(W^*)
+e^{-(1-\varepsilon)}U(W^*).
+$$
+
+Thus,
+
+$$
+U(S_{l+1}')
+\geq
+\left(1-e^{-(1-\varepsilon)}\right)U(W^*).
+$$
+
+Since for $0<\varepsilon<1$,
+
+$$
+1-e^{-(1-\varepsilon)}
+\geq
+(1-\varepsilon)\left(1-\frac{1}{e}\right),
+$$
+
+we further have
+
+$$
+U(S_{l+1}')
+\geq
+(1-\varepsilon)\left(1-\frac{1}{e}\right)U(W^*).
+$$
+
+Rearranging gives
+
+$$
+U(W^*)
+\leq
+\frac{1}{(1-\varepsilon)(1-1/e)}U(S_{l+1}').
+$$
+
+Therefore,
+
+$$
+U(W^*)
+\leq
+\frac{e}{(e-1)(1-\varepsilon)}U(S_{l+1}').
+$$
+
+This completes the proof.
+
