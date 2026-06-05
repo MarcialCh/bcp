@@ -145,8 +145,7 @@ For every winner $k\in W$, the payment is defined as
 
 $$
 p_k = \max_{1\le j\le \hat{\ell}+1}
-\min
-\left\{
+\min \left\{
 b_{k(j)}^{\varepsilon},
 \rho_{k(j)}^{\varepsilon}
 \right\},
