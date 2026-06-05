@@ -180,11 +180,8 @@ Consider an arbitrary winner $k\in W$. By the definition of $p_k$, there exists 
 
 $$
 p_k=
-\min
-\bigl{
-b_{k(r)}^{\varepsilon},
-\rho_{k(r)}^{\varepsilon}
-\bigr}.
+\min\{\,b_{k(r)}^{\varepsilon},
+\rho_{k(r)}^{\varepsilon}\,\}.
 $$
 
 Therefore,
@@ -283,12 +280,7 @@ $$
 Combining (2) and (7), we obtain
 
 $$
-\frac{U_{k\mid S_{r-1}}}{p_k}
-\ge
-\frac{2U(W)}
-     {(1-\varepsilon)B}
->
-\frac{U(W)}{B},
+\frac{U_{k\mid S_{r-1}}}{p_k} \ge \frac{2U(W)}{(1-\varepsilon)B}>\frac{U(W)}{B},
 $$
 
 which contradicts (5).
@@ -369,24 +361,14 @@ $$
 Thus,
 
 $$
-U(S_1)
->
-\frac{1}{2}U(W).
+U(S_1)>\frac{1}{2}U(W).
 (14)
 $$
 
 Substituting (14) into (2),
 
 $$
-\frac{U_{k\mid S_{r-1}}}{p_k}
-\ge
-\frac{2U(S_1)}
-     {(1-\varepsilon)B}
->
-\frac{U(W)}
-     {(1-\varepsilon)B}
-\ge
-\frac{U(W)}{B},
+\frac{U_{k\mid S_{r-1}}}{p_k} \ge \frac{2U(S_1)}{(1-\varepsilon)B} > \frac{U(W)}{(1-\varepsilon)B} \ge \frac{U(W)}{B},
 $$
 
 which again contradicts (5).
