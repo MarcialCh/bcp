@@ -511,7 +511,16 @@ U(W^*).
 $$
 
 Using $1-x\leq e^{-x}$, we obtain
-$e^{-(1-\varepsilon)}U(W^*)$.
+$$
+\Delta_{l+1}
+\le
+\exp\left(
+-(1-\varepsilon)
+\sum_{k=1}^{l+1}
+\frac{b_{i_k'}}{B}
+\right)
+U(W^*).
+$$
 
 Thus,
 
