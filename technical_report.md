@@ -145,8 +145,8 @@ For every winner $k\in W$, the payment is defined as
 
 $$
 p_k=
-\min\{\,b_{k(r)}^{\varepsilon},
-\rho_{k(r)}^{\varepsilon}\,\}.
+\min\{b_{k(r)}^{\varepsilon},
+\rho_{k(r)}^{\varepsilon}\}.
 $$
 where
 
@@ -180,8 +180,8 @@ Consider an arbitrary winner $k\in W$. By the definition of $p_k$, there exists 
 
 $$
 p_k=
-\min\{\,b_{k(r)}^{\varepsilon},
-\rho_{k(r)}^{\varepsilon}\,\}.
+\min\{b_{k(r)}^{\varepsilon},
+\rho_{k(r)}^{\varepsilon}\}.
 $$
 
 Therefore,
