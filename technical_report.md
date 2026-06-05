@@ -448,14 +448,10 @@ $$
 By monotonicity and submodularity of $U(\cdot)$, we have
 
 $$
-U(W^*) - U(S_{k-1}')
-\leq
-U(W^*\cup S_{k-1}') - U(S_{k-1}')
-\leq
-\sum_{j\in W^*\setminus S_{k-1}'} U_{j\mid S_{k-1}'}.
+U(W^*) - U(S_{k-1}') \leq U(W^* \cup S_{k-1}') - U(S_{k-1}') \leq \sum_{j\in W^*\setminus S_{k-1}'} U_{j\mid S_{k-1}'}.
 $$
 
-Since $W^*$ is budget-feasible, $\sum_{j\in W^*} b_j \leq B$. Therefore, there exists at least one seller in $W^*\setminus S_{k-1}'$ whose density is at least the average density of the remaining optimal marginal utility, namely,
+Therefore, there exists at least one seller in $W^*\setminus S_{k-1}'$ whose density is at least the average density of the remaining optimal marginal utility, namely,
 
 $$
 \max_{j\in A\setminus S_{k-1}'}
