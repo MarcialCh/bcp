@@ -563,7 +563,7 @@ $$
 
 This completes the proof.
 
-### Theorem 2 (Conservative Approximate Truthfulness and Individual Rationality)
+### Theorem 2 (Approximate Truthfulness and Individual Rationality)
 
 Let $\tau_k$ denote the exact critical payment of winner $k$. Suppose the lazy payment satisfies
 
