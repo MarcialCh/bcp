@@ -563,3 +563,124 @@ $$
 
 This completes the proof.
 
+### Theorem 2 (Conservative Approximate Truthfulness and Individual Rationality)
+
+Let $\tau_k$ denote the exact critical payment of winner $k$. Suppose the lazy payment satisfies
+
+$$
+p_k \ge (1-\varepsilon)^2 \tau_k .
+$$
+
+Then the mechanism satisfies $(1-\varepsilon)^2$-approximate individual rationality:
+
+$$
+p_k \ge (1-\varepsilon)^2 b_k ,
+$$
+
+and additive approximate truthfulness:
+
+$$
+u_k^{\mathrm{mis}}-u_k^{\mathrm{truth}}
+\le
+\left(1-(1-\varepsilon)^2\right)B .
+$$
+
+### Proof
+
+Since $k$ is a winner, its bid is no larger than its exact critical payment:
+
+$$
+b_k \le \tau_k .
+$$
+
+By the conservative payment approximation,
+
+$$
+p_k \ge (1-\varepsilon)^2 \tau_k .
+$$
+
+Therefore,
+
+$$
+p_k
+\ge
+(1-\varepsilon)^2 \tau_k
+\ge
+(1-\varepsilon)^2 b_k .
+$$
+
+Thus, the mechanism satisfies $(1-\varepsilon)^2$-approximate individual rationality.
+
+Next, let $c_k$ be the true cost of seller $k$. Under truthful bidding,
+
+$$
+u_k^{\mathrm{truth}}
+=p_k-c_k .
+$$
+
+Since
+
+$$
+p_k \ge (1-\varepsilon)^2\tau_k ,
+$$
+
+we have
+
+$$
+u_k^{\mathrm{truth}}
+\ge
+(1-\varepsilon)^2\tau_k-c_k .
+\tag{1}
+$$
+
+Under any misreport, the maximum utility that seller $k$ can obtain in the exact critical-payment mechanism is at most
+
+$$
+u_k^{\mathrm{mis}}
+\le
+\tau_k-c_k .
+\tag{2}
+$$
+
+Combining (1) and (2),
+
+$$
+u_k^{\mathrm{mis}}-u_k^{\mathrm{truth}}
+\le
+(\tau_k-c_k)-((1-\varepsilon)^2\tau_k-c_k).
+$$
+
+Hence,
+
+$$
+u_k^{\mathrm{mis}}-u_k^{\mathrm{truth}}
+\le
+\left(1-(1-\varepsilon)^2\right)\tau_k .
+$$
+
+Since every critical payment is upper bounded by the total budget $B$,
+
+$$
+\tau_k\le B .
+$$
+
+Therefore,
+
+$$
+u_k^{\mathrm{mis}}-u_k^{\mathrm{truth}}
+\le
+\left(1-(1-\varepsilon)^2\right)B .
+$$
+
+Thus, the mechanism is additively approximately truthful.
+
+$$
+\boxed{
+u_k^{\mathrm{mis}}-u_k^{\mathrm{truth}}
+\le
+\left(1-(1-\varepsilon)^2\right)B
+}
+$$
+
+$\square$
+
