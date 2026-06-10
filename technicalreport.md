@@ -630,7 +630,7 @@ $$
 u_k^{\mathrm{truth}}
 \ge
 (1-\varepsilon)^2\tau_k-c_k .
-\tag{1}
+(1)
 $$
 
 Under any misreport, the maximum utility that seller $k$ can obtain in the exact critical-payment mechanism is at most
@@ -639,7 +639,7 @@ $$
 u_k^{\mathrm{mis}}
 \le
 \tau_k-c_k .
-\tag{2}
+(2)
 $$
 
 Combining (1) and (2),
